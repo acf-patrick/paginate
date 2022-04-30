@@ -2,7 +2,8 @@
 
 Simple pagination component for Angular
 Feel free to modify the stylesheet ^\_^
-`num-active` class is added active button, add your own style.
+
+`num-active` class is added to active button, add your own style.
 
 ## Props
 
