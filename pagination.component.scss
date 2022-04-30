@@ -1,0 +1,59 @@
+@import "../../../@shared/styles/variables";
+
+nav {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background: $quaternary;
+  border: none;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 30px;
+  color: $primary;
+  transition: all 300ms ease-out;
+
+  &:hover {
+    background: lighten($quaternary, 20);
+  }
+}
+
+.direction {
+  &:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.425);
+  }
+
+  &.left:active {
+    transform: translateX(-10px);
+  }
+
+  &.right:active {
+    transform: translateX(10px);
+  }
+}
+
+$dotsRadius: 10px;
+.threeDots {
+  display: flex;
+  gap: 5px;
+  padding: 0 0.5rem;
+
+  div {
+    width: $dotsRadius;
+    height: $dotsRadius;
+    background: $quaternary;
+    border-radius: 5px;
+  }
+}
+
+.num-active {
+  background: $secondary;
+  color: $quaternary;
+}

@@ -1,0 +1,39 @@
+<nav class="py-3">
+  <ul class="d-flex p-0 justify-content-center align-items-center gap-2">
+    <li class="me-4">
+      <button
+        class="direction left"
+        (click)="dirOnClick('left')"
+        title="previous"
+      >
+        <i class="fas fa-chevron-left"></i>
+      </button>
+    </li>
+    <li *ngFor="let i of range()">
+      <button
+        *ngIf="i > 0; else threeDots"
+        type="button"
+        [ngClass]="{ 'num-active': i === lastNumClicked }"
+        (click)="numOnClick(i)"
+      >
+        {{ i }}
+      </button>
+      <ng-template #threeDots>
+        <div class="threeDots">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </ng-template>
+    </li>
+    <li class="ms-4">
+      <button
+        class="direction right"
+        (click)="dirOnClick('right')"
+        title="next"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
